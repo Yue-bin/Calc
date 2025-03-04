@@ -24,7 +24,7 @@
     </Design.DataContext>
 
     <Grid
-        Margin="3"
+        Margin="5"
         ColumnDefinitions="*,*,*,*"
         RowDefinitions="0.5*,1.25*,*,*,*,*,*"
         ShowGridLines="True">
@@ -45,8 +45,24 @@
             Grid.ColumnSpan="4"
             HorizontalAlignment="Right"
             VerticalAlignment="Bottom"
-            FontSize="42"
+            FontSize="48"
             FontWeight="Normal"
-            Text="{Binding MainText}" />
+            Text="{Binding MainText}" />、
+        <!--  Control Buttons  -->
+        <Button
+            Grid.Row="2"
+            Grid.Column="0"
+            Content="C"
+            Command="{Binding ClearCommand}" />
+        <Button
+            Grid.Row="2"
+            Grid.Column="1"
+            Content="Del"
+            Command="{Binding DeleteCommand}" />
+        <Button
+            Grid.Row="6"
+            Grid.Column="3"
+            Content="="
+            Command="{Binding EqualCommand}" />
     </Grid>
 </Window>

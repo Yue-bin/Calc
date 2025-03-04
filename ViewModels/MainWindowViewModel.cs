@@ -5,7 +5,7 @@ namespace Calc.ViewModels;
 public partial class MainWindowViewModel : ViewModelBase
 {
     [ObservableProperty]
-    public string _subText = "Sub";
+    public string _subText = "77";
     [ObservableProperty]
-    public string _mainText = "Main";
+    public string _mainText = "18 * 3 + 24 - 1";
 }
