@@ -9,7 +9,7 @@
     Width="400"
     Height="650"
     d:DesignHeight="400"
-    d:DesignWidth="675"
+    d:DesignWidth="650"
     x:DataType="vm:MainWindowViewModel"
     Icon="/Assets/avalonia-logo.ico"
     mc:Ignorable="d">
@@ -24,10 +24,9 @@
     </Design.DataContext>
 
     <Grid
-        Margin="5"
+        Margin="10"
         ColumnDefinitions="*,*,*,*"
-        RowDefinitions="0.5*,1.25*,*,*,*,*,*"
-        ShowGridLines="True">
+        RowDefinitions="0.5*,*,*,*,*,*,*">
         <!--  Sub Text  -->
         <TextBlock
             Grid.Row="0"
@@ -47,22 +46,22 @@
             VerticalAlignment="Bottom"
             FontSize="48"
             FontWeight="Normal"
-            Text="{Binding MainText}" />、
+            Text="{Binding MainText}" />
         <!--  Control Buttons  -->
         <Button
             Grid.Row="2"
             Grid.Column="0"
-            Content="C"
-            Command="{Binding ClearCommand}" />
+            Command="{Binding ClearCommand}"
+            Content="C" />
         <Button
             Grid.Row="2"
             Grid.Column="1"
-            Content="Del"
-            Command="{Binding DeleteCommand}" />
+            Command="{Binding DeleteCommand}"
+            Content="Del" />
         <Button
             Grid.Row="6"
             Grid.Column="3"
-            Content="="
-            Command="{Binding EqualCommand}" />
+            Command="{Binding EvaluateCommand}"
+            Content="=" />
     </Grid>
 </Window>
