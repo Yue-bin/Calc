@@ -1,20 +1,52 @@
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:Calc.ViewModels"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="Calc.Views.MainWindow"
-        x:DataType="vm:MainWindowViewModel"
-        Icon="/Assets/avalonia-logo.ico"
-        Title="Calc">
+<Window
+    x:Class="Calc.Views.MainWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:Calc.ViewModels"
+    Title="Calc"
+    Width="400"
+    Height="650"
+    d:DesignHeight="400"
+    d:DesignWidth="675"
+    x:DataType="vm:MainWindowViewModel"
+    Icon="/Assets/avalonia-logo.ico"
+    mc:Ignorable="d">
 
     <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
+        <!--
+            This only sets the DataContext for the previewer in an IDE,
+            to set the actual DataContext for runtime, set the DataContext property in code (look at
+            App.axaml.cs)
+        -->
+        <vm:MainWindowViewModel />
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+    <Grid
+        Margin="3"
+        ColumnDefinitions="*,*,*,*"
+        RowDefinitions="0.5*,1.25*,*,*,*,*,*"
+        ShowGridLines="True">
+        <!--  Sub Text  -->
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            FontSize="30"
+            FontWeight="Thin"
+            Text="{Binding SubText}" />
+        <!--  Main Text  -->
+        <TextBlock
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            FontSize="42"
+            FontWeight="Normal"
+            Text="{Binding MainText}" />
+    </Grid>
 </Window>

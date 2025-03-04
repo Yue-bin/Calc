@@ -1,6 +1,11 @@
-﻿namespace Calc.ViewModels;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace Calc.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {
-    public string Greeting { get; } = "Welcome to Avalonia!";
+    [ObservableProperty]
+    public string _subText = "Sub";
+    [ObservableProperty]
+    public string _mainText = "Main";
 }
