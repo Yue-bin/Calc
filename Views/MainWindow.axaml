@@ -6,6 +6,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:Calc.ViewModels"
     Title="Calc"
+    TransparencyLevelHint="AcrylicBlur"
+    Background="Transparent"
+    ExtendClientAreaToDecorationsHint="True"
     Width="400"
     Height="650"
     d:DesignHeight="400"
@@ -36,6 +39,7 @@
             VerticalAlignment="Bottom"
             FontSize="30"
             FontWeight="Thin"
+            TextWrapping="Wrap"
             Text="{Binding SubText}" />
         <!--  Main Text  -->
         <TextBlock
@@ -46,22 +50,142 @@
             VerticalAlignment="Bottom"
             FontSize="48"
             FontWeight="Normal"
+            TextWrapping="Wrap"
             Text="{Binding MainText}" />
         <!--  Control Buttons  -->
         <Button
+            Classes="ctl normal"
             Grid.Row="2"
             Grid.Column="0"
             Command="{Binding ClearCommand}"
             Content="C" />
         <Button
+            Classes="ctl normal"
             Grid.Row="2"
             Grid.Column="1"
             Command="{Binding DeleteCommand}"
             Content="Del" />
         <Button
+            Classes="ctl normal"
             Grid.Row="6"
             Grid.Column="3"
             Command="{Binding EvaluateCommand}"
             Content="=" />
+        <!-- Number Buttons -->
+        <Button
+            Classes="normal"
+            Grid.Row="5"
+            Grid.Column="0"
+            Command="{Binding AddCommand}"
+            CommandParameter="1" 
+            Content="1" />
+        <Button
+            Classes="normal"
+            Grid.Row="5"
+            Grid.Column="1"
+            Command="{Binding AddCommand}"
+            CommandParameter="2" 
+            Content="2" />
+        <Button
+            Classes="normal"
+            Grid.Row="5"
+            Grid.Column="2"
+            Command="{Binding AddCommand}"
+            CommandParameter="3" 
+            Content="3" />
+        <Button
+            Classes="normal"
+            Grid.Row="4"
+            Grid.Column="0"
+            Command="{Binding AddCommand}"
+            CommandParameter="4" 
+            Content="4" />
+        <Button
+            Classes="normal"
+            Grid.Row="4"
+            Grid.Column="1"
+            Command="{Binding AddCommand}"
+            CommandParameter="5"
+            Content="5" />
+        <Button
+            Classes="normal"
+            Grid.Row="4"
+            Grid.Column="2"
+            Command="{Binding AddCommand}"
+            CommandParameter="6"
+            Content="6" />
+        <Button
+            Classes="normal"
+            Grid.Row="3"
+            Grid.Column="0"
+            Command="{Binding AddCommand}"
+            CommandParameter="7"
+            Content="7" />
+        <Button
+            Classes="normal"
+            Grid.Row="3"
+            Grid.Column="1"
+            Command="{Binding AddCommand}"
+            CommandParameter="8"
+            Content="8" />
+        <Button
+            Classes="normal"
+            Grid.Row="3"
+            Grid.Column="2"
+            Command="{Binding AddCommand}"
+            CommandParameter="9"
+            Content="9" />
+        <Button
+            Classes="normal"
+            Grid.Row="6"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Command="{Binding AddCommand}"
+            CommandParameter="0"
+            Content="0" />
+        <!--  Symbol Button  -->
+        <Button
+            Classes="normal"
+            Grid.Row="6"
+            Grid.Column="2"
+            Command="{Binding AddCommand}"
+            CommandParameter="."
+            Content="." />
+        <Button
+            Classes="normal"
+            Grid.Row="2"
+            Grid.Column="2"
+            Command="{Binding AddCommand}"
+            CommandParameter="%"
+            Content="%" />
+        <!--  Operator Buttons  -->
+        <Button
+            Classes="normal"
+            Grid.Row="2"
+            Grid.Column="3"
+            Command="{Binding AddCommand}"
+            CommandParameter="÷"
+            Content="÷" />
+        <Button
+            Classes="normal"
+            Grid.Row="3"
+            Grid.Column="3"
+            Command="{Binding AddCommand}"
+            CommandParameter="×"
+            Content="×" />
+        <Button
+            Classes="normal"
+            Grid.Row="4"
+            Grid.Column="3"
+            Command="{Binding AddCommand}"
+            CommandParameter="-"
+            Content="-" />
+        <Button
+            Classes="normal"
+            Grid.Row="5"
+            Grid.Column="3"
+            Command="{Binding AddCommand}"
+            CommandParameter="+"
+            Content="+" />
     </Grid>
 </Window>
