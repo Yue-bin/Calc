@@ -58,18 +58,21 @@
             Grid.Row="2"
             Grid.Column="0"
             Command="{Binding ClearCommand}"
+            HotKey="Delete"
             Content="C" />
         <Button
             Classes="ctl normal"
             Grid.Row="2"
             Grid.Column="1"
             Command="{Binding DeleteCommand}"
+            HotKey="Back"
             Content="Del" />
         <Button
             Classes="ctl normal"
             Grid.Row="6"
             Grid.Column="3"
             Command="{Binding EvaluateCommand}"
+            HotKey="Enter"
             Content="=" />
         <!-- Number Buttons -->
         <Button
@@ -78,6 +81,7 @@
             Grid.Column="0"
             Command="{Binding AddCommand}"
             CommandParameter="1" 
+            HotKey="D1"
             Content="1" />
         <Button
             Classes="normal"
@@ -85,6 +89,7 @@
             Grid.Column="1"
             Command="{Binding AddCommand}"
             CommandParameter="2" 
+            HotKey="D2"
             Content="2" />
         <Button
             Classes="normal"
@@ -92,6 +97,7 @@
             Grid.Column="2"
             Command="{Binding AddCommand}"
             CommandParameter="3" 
+            HotKey="D3"
             Content="3" />
         <Button
             Classes="normal"
@@ -99,6 +105,7 @@
             Grid.Column="0"
             Command="{Binding AddCommand}"
             CommandParameter="4" 
+            HotKey="D4"
             Content="4" />
         <Button
             Classes="normal"
@@ -106,6 +113,7 @@
             Grid.Column="1"
             Command="{Binding AddCommand}"
             CommandParameter="5"
+            HotKey="D5"
             Content="5" />
         <Button
             Classes="normal"
@@ -113,6 +121,7 @@
             Grid.Column="2"
             Command="{Binding AddCommand}"
             CommandParameter="6"
+            HotKey="D6"
             Content="6" />
         <Button
             Classes="normal"
@@ -120,6 +129,7 @@
             Grid.Column="0"
             Command="{Binding AddCommand}"
             CommandParameter="7"
+            HotKey="D7"
             Content="7" />
         <Button
             Classes="normal"
@@ -127,6 +137,7 @@
             Grid.Column="1"
             Command="{Binding AddCommand}"
             CommandParameter="8"
+            HotKey="D8"
             Content="8" />
         <Button
             Classes="normal"
@@ -134,6 +145,7 @@
             Grid.Column="2"
             Command="{Binding AddCommand}"
             CommandParameter="9"
+            HotKey="D9"
             Content="9" />
         <Button
             Classes="normal"
@@ -142,6 +154,7 @@
             Grid.ColumnSpan="2"
             Command="{Binding AddCommand}"
             CommandParameter="0"
+            HotKey="D0"
             Content="0" />
         <!--  Symbol Button  -->
         <Button
@@ -150,6 +163,7 @@
             Grid.Column="2"
             Command="{Binding AddCommand}"
             CommandParameter="."
+            HotKey="Decimal"
             Content="." />
         <Button
             Classes="normal"
@@ -157,6 +171,7 @@
             Grid.Column="2"
             Command="{Binding AddCommand}"
             CommandParameter="%"
+            HotKey="Shift+D5"
             Content="%" />
         <!--  Operator Buttons  -->
         <Button
@@ -165,6 +180,7 @@
             Grid.Column="3"
             Command="{Binding AddCommand}"
             CommandParameter="÷"
+            HotKey="Divide"
             Content="÷" />
         <Button
             Classes="normal"
@@ -172,6 +188,7 @@
             Grid.Column="3"
             Command="{Binding AddCommand}"
             CommandParameter="×"
+            HotKey="Multiply"
             Content="×" />
         <Button
             Classes="normal"
@@ -179,6 +196,7 @@
             Grid.Column="3"
             Command="{Binding AddCommand}"
             CommandParameter="-"
+            HotKey="Subtract"
             Content="-" />
         <Button
             Classes="normal"
@@ -186,6 +204,7 @@
             Grid.Column="3"
             Command="{Binding AddCommand}"
             CommandParameter="+"
+            HotKey="Add"
             Content="+" />
     </Grid>
 </Window>
