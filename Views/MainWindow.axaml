@@ -6,9 +6,6 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:Calc.ViewModels"
     Title="Calc"
-    TransparencyLevelHint="AcrylicBlur"
-    Background="Transparent"
-    ExtendClientAreaToDecorationsHint="True"
     Width="400"
     Height="650"
     d:DesignHeight="400"
@@ -39,8 +36,8 @@
             VerticalAlignment="Bottom"
             FontSize="30"
             FontWeight="Thin"
-            TextWrapping="Wrap"
-            Text="{Binding SubText}" />
+            Text="{Binding SubText}"
+            TextWrapping="Wrap" />
         <!--  Main Text  -->
         <TextBlock
             Grid.Row="1"
@@ -50,161 +47,161 @@
             VerticalAlignment="Bottom"
             FontSize="48"
             FontWeight="Normal"
-            TextWrapping="Wrap"
-            Text="{Binding MainText}" />
+            Text="{Binding MainText}"
+            TextWrapping="Wrap" />
         <!--  Control Buttons  -->
         <Button
-            Classes="ctl normal"
             Grid.Row="2"
             Grid.Column="0"
-            Command="{Binding ClearCommand}"
-            HotKey="Delete"
-            Content="C" />
-        <Button
             Classes="ctl normal"
+            Command="{Binding ClearCommand}"
+            Content="C"
+            HotKey="Delete" />
+        <Button
             Grid.Row="2"
             Grid.Column="1"
-            Command="{Binding DeleteCommand}"
-            HotKey="Back"
-            Content="Del" />
-        <Button
             Classes="ctl normal"
+            Command="{Binding DeleteCommand}"
+            Content="Del"
+            HotKey="Back" />
+        <Button
             Grid.Row="6"
             Grid.Column="3"
+            Classes="ctl normal"
             Command="{Binding EvaluateCommand}"
-            HotKey="Enter"
-            Content="=" />
-        <!-- Number Buttons -->
+            Content="="
+            HotKey="Enter" />
+        <!--  Number Buttons  -->
         <Button
-            Classes="normal"
             Grid.Row="5"
             Grid.Column="0"
-            Command="{Binding AddCommand}"
-            CommandParameter="1" 
-            HotKey="D1"
-            Content="1" />
-        <Button
             Classes="normal"
+            Command="{Binding AddCommand}"
+            CommandParameter="1"
+            Content="1"
+            HotKey="D1" />
+        <Button
             Grid.Row="5"
             Grid.Column="1"
-            Command="{Binding AddCommand}"
-            CommandParameter="2" 
-            HotKey="D2"
-            Content="2" />
-        <Button
             Classes="normal"
+            Command="{Binding AddCommand}"
+            CommandParameter="2"
+            Content="2"
+            HotKey="D2" />
+        <Button
             Grid.Row="5"
             Grid.Column="2"
-            Command="{Binding AddCommand}"
-            CommandParameter="3" 
-            HotKey="D3"
-            Content="3" />
-        <Button
             Classes="normal"
+            Command="{Binding AddCommand}"
+            CommandParameter="3"
+            Content="3"
+            HotKey="D3" />
+        <Button
             Grid.Row="4"
             Grid.Column="0"
-            Command="{Binding AddCommand}"
-            CommandParameter="4" 
-            HotKey="D4"
-            Content="4" />
-        <Button
             Classes="normal"
+            Command="{Binding AddCommand}"
+            CommandParameter="4"
+            Content="4"
+            HotKey="D4" />
+        <Button
             Grid.Row="4"
             Grid.Column="1"
+            Classes="normal"
             Command="{Binding AddCommand}"
             CommandParameter="5"
-            HotKey="D5"
-            Content="5" />
+            Content="5"
+            HotKey="D5" />
         <Button
-            Classes="normal"
             Grid.Row="4"
             Grid.Column="2"
+            Classes="normal"
             Command="{Binding AddCommand}"
             CommandParameter="6"
-            HotKey="D6"
-            Content="6" />
+            Content="6"
+            HotKey="D6" />
         <Button
-            Classes="normal"
             Grid.Row="3"
             Grid.Column="0"
+            Classes="normal"
             Command="{Binding AddCommand}"
             CommandParameter="7"
-            HotKey="D7"
-            Content="7" />
+            Content="7"
+            HotKey="D7" />
         <Button
-            Classes="normal"
             Grid.Row="3"
             Grid.Column="1"
+            Classes="normal"
             Command="{Binding AddCommand}"
             CommandParameter="8"
-            HotKey="D8"
-            Content="8" />
+            Content="8"
+            HotKey="D8" />
         <Button
-            Classes="normal"
             Grid.Row="3"
             Grid.Column="2"
+            Classes="normal"
             Command="{Binding AddCommand}"
             CommandParameter="9"
-            HotKey="D9"
-            Content="9" />
+            Content="9"
+            HotKey="D9" />
         <Button
-            Classes="normal"
             Grid.Row="6"
             Grid.Column="0"
             Grid.ColumnSpan="2"
+            Classes="normal"
             Command="{Binding AddCommand}"
             CommandParameter="0"
-            HotKey="D0"
-            Content="0" />
+            Content="0"
+            HotKey="D0" />
         <!--  Symbol Button  -->
         <Button
-            Classes="normal"
             Grid.Row="6"
             Grid.Column="2"
+            Classes="normal"
             Command="{Binding AddCommand}"
             CommandParameter="."
-            HotKey="Decimal"
-            Content="." />
+            Content="."
+            HotKey="Decimal" />
         <Button
-            Classes="normal"
             Grid.Row="2"
             Grid.Column="2"
+            Classes="normal"
             Command="{Binding AddCommand}"
             CommandParameter="%"
-            HotKey="Shift+D5"
-            Content="%" />
+            Content="%"
+            HotKey="Shift+D5" />
         <!--  Operator Buttons  -->
         <Button
-            Classes="normal"
             Grid.Row="2"
             Grid.Column="3"
+            Classes="normal"
             Command="{Binding AddCommand}"
             CommandParameter="÷"
-            HotKey="Divide"
-            Content="÷" />
+            Content="÷"
+            HotKey="Divide" />
         <Button
-            Classes="normal"
             Grid.Row="3"
             Grid.Column="3"
+            Classes="normal"
             Command="{Binding AddCommand}"
             CommandParameter="×"
-            HotKey="Multiply"
-            Content="×" />
+            Content="×"
+            HotKey="Multiply" />
         <Button
-            Classes="normal"
             Grid.Row="4"
             Grid.Column="3"
+            Classes="normal"
             Command="{Binding AddCommand}"
             CommandParameter="-"
-            HotKey="Subtract"
-            Content="-" />
+            Content="-"
+            HotKey="Subtract" />
         <Button
-            Classes="normal"
             Grid.Row="5"
             Grid.Column="3"
+            Classes="normal"
             Command="{Binding AddCommand}"
             CommandParameter="+"
-            HotKey="Add"
-            Content="+" />
+            Content="+"
+            HotKey="Add" />
     </Grid>
 </Window>
